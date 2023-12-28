@@ -1,47 +1,21 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+import Header from '@/components/Header.vue';
+import Balance from './components/Balance.vue';
+import IncomeExpenses from './components/IncomeExpenses.vue';
+import TransectionHistory from './components/TransectionHistory.vue';
+import Transection from './components/Transection.vue';
+import '@/assets/style.css';
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="Jackson Konjengbam" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+    <Header title="Expense Tracker" by="Jackson Konjengbam" />
+    <Balance title="Current Balance" />
+    <IncomeExpenses />
+    <TransectionHistory />
+    <Transection />
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-}
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
