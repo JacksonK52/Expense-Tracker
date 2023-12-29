@@ -22,13 +22,12 @@ h1, h2, h3, h4, h5, h6, p {
 
 body {
     color: var(--black);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--light-gray);
     font-family: 'Poppins', sans-serif;
-    overflow-y: scroll;
 }
 
 .font-hindi {
