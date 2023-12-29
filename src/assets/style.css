@@ -28,6 +28,7 @@ body {
     justify-content: center;
     background-color: var(--light-gray);
     font-family: 'Poppins', sans-serif;
+    overflow-y: scroll;
 }
 
 .font-hindi {
