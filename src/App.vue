@@ -9,11 +9,13 @@ import '@/assets/style.css';
 </script>
 
 <template>
-    <Header title="Expense Tracker" by="Jackson Konjengbam" />
-    <Balance title="Current Balance" />
-    <IncomeExpenses />
-    <TransectionHistory />
-    <Transection />
+    <div class="container">
+        <Header title="Expense Tracker" by="Jackson Konjengbam" />
+        <Balance title="Current Balance" />
+        <IncomeExpenses />
+        <TransectionHistory />
+        <Transection />
+    </div>
 </template>
 
 <style scoped>

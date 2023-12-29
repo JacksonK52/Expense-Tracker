@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <div >
+    <div class="mb-2">
         <h3 class="title">History</h3>
         <hr>
         <ul class="unorder-list">
