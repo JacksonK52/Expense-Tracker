@@ -18,7 +18,7 @@ const props = defineProps({
         <div class="py-2 border-right">
             <p class="title">Income</p>
             <p class="total text-primary">
-                <span class="font-hindi">₹</span>{{ props.income.toFixed(2) }}
+                <span class="font-hindi">+ ₹</span>{{ props.income.toFixed(2) }}
             </p>
         </div>
 
@@ -26,7 +26,7 @@ const props = defineProps({
         <div class="py-2">
             <p class="title">Expenses</p>
             <p class="total text-danger">
-                <span class="font-hindi">₹</span>{{ props.expenses.toFixed(2) }}
+                <span class="font-hindi">- ₹</span>{{ props.expenses.toFixed(2) }}
             </p>
         </div>
     </div>
@@ -50,7 +50,7 @@ const props = defineProps({
 }
 
 .total {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 500;
 }
 </style>

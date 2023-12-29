@@ -26,7 +26,7 @@ const props = defineProps({
     line-height: 0;
 }
 .balance {
-    font-size: 48px;
+    font-size: 36px;
     font-weight: 500;
 }
 </style>

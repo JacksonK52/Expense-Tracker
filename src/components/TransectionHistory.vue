@@ -1,5 +1,17 @@
 <script setup>
 
+const props = defineProps({
+    transactions: {
+        type: Object,
+        required: true
+    }
+});
+
+const emit = defineEmits(['transactionDeleted']);
+
+const handleDelete = (id) => {
+    emit(transactionDeleted, id);
+}
 </script>
 
 <template>
@@ -7,13 +19,16 @@
         <h3 class="title">History</h3>
         <hr>
         <ul class="unorder-list">
-            <li class="list plus">
-                <p>Salary</p>
-                <p><span class="font-hindi">₹</span> 10000</p>
-            </li>
-            <li class="list minus">
-                <p>Food</p>
-                <p><span class="font-hindi">₹</span> -100</p>
+            <li 
+                class="list"
+                v-for="transaction in props.transactions"
+                    :key="transaction.id"
+            >
+                <div class="item" :class="transaction.amount > 0 ? 'plus' : 'minus'">
+                    <p>{{ transaction.remark }}</p>
+                    <p><span class="font-hindi">₹</span> {{ transaction.amount }}</p>
+                </div>
+                <button @click="handleDelete(transaction.id)" class="btn-delete">X</button>
             </li>
         </ul>
     </div>
@@ -26,13 +41,17 @@
 }
 
 .list {
-    margin-top: 10px;
+    margin-top: 2px;
     padding: 5px 10px;
-    background-color: var(--white);
+    /* background-color: var(--white); */
     list-style-type: none;
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.list:hover .btn-delete {
+    opacity: 1;
 }
 
 .minus {
@@ -41,5 +60,25 @@
 
 .plus {
     border-left: 5px solid var(--success);
+}
+
+.item {
+    width: 100%;
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--white);
+}
+
+.btn-delete {
+    margin: 0 5px;
+    padding: 3px 8px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--danger);
+    color: var(--white);
+    opacity: 0;
 }
 </style>

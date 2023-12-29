@@ -1,7 +1,27 @@
 <script setup>
+import { ref } from 'vue';
+import { useToast } from 'vue-toastification';
 
-const submit = () => {
+const remark = ref('');
+const amount = ref('');
 
+const toast = useToast();
+
+const emit = defineEmits(['transactionSubmitted']);
+
+const handleSubmit = () => {
+    if(!remark.value || !amount.value) {
+        toast.error('Both fields must be filled!');
+        return;
+    }
+
+    emit('transactionSubmitted', {
+        remark: remark.value,
+        amount: parseFloat(amount.value)
+    })
+
+    remark.value = '';
+    amount.value = '';
 }
 </script>
 
@@ -9,14 +29,15 @@ const submit = () => {
     <div>
         <h3 class="title">New Transaction</h3>
         <hr>
-        <form @submit.prevent="submit">
+        <form @submit.prevent="handleSubmit">
             <div class="form-group">
                 <label for="remark">Remark</label>
-                <input type="text" class="form-control" name="remark" id="remark" placeholder="Chai and Biscuits" autofocus required>
+                <input type="text" class="form-control" name="remark" id="remark" v-model="remark" placeholder="Chai and Biscuits" autofocus>
             </div>
             <div class="form-group">
                 <label for="amount">Amount</label>
-                <input type="text" class="form-control" name="amount" id="amount" placeholder="-400" required>
+                <input type="text" class="form-control" name="amount" id="amount" v-model="amount" placeholder="-400">
+                <small class="text-sm">(Negative: expenses | Positive: income)</small>
             </div>
             <div class="text-right">
                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -36,7 +57,7 @@ const submit = () => {
 }
 .form-control {
     width: 100%;
-    padding: 6px;
+    padding: 6px 10px;
     outline: none;
     border: none;
     border-radius: 5px;
@@ -46,6 +67,10 @@ const submit = () => {
 
 .text-right {
     text-align: right;
+}
+
+.text-sm {
+    font-size: 10px;
 }
 
 .btn {
