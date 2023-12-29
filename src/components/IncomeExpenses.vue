@@ -37,12 +37,11 @@ const props = defineProps({
     background-color: var(--white);
     display: flex;
     justify-content: space-around;
-    width: 400px;
     text-align: center;
 }
 
 .title {
-    width: 200px;
+    width: 130px;
     font-size: 16px;
     letter-spacing: 1.5px;
     font-weight: 500;
