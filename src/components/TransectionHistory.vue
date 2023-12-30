@@ -7,10 +7,10 @@ const props = defineProps({
     }
 });
 
-const emit = defineEmits(['transactionDeleted']);
+const emits = defineEmits(['transactionDeleted']);
 
 const handleDelete = (id) => {
-    emit(transactionDeleted, id);
+    emits('transactionDeleted', id);
 }
 </script>
 

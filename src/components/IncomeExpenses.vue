@@ -13,23 +13,23 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="incomeExpenses shadow mb-2">
+    <article class="incomeExpenses shadow mb-2">
         <!-- Income -->
-        <div class="py-2 border-right">
+        <section class="py-2 border-right">
             <p class="title">Income</p>
             <p class="total text-primary">
                 <span class="font-hindi">+ ₹</span>{{ props.income.toFixed(2) }}
             </p>
-        </div>
+        </section>
 
         <!-- Expenditure -->
-        <div class="py-2">
+        <section class="py-2">
             <p class="title">Expenses</p>
             <p class="total text-danger">
                 <span class="font-hindi">- ₹</span>{{ props.expenses.toFixed(2) }}
             </p>
-        </div>
-    </div>
+        </section>
+    </article>
 </template>
 
 <style scoped>
@@ -37,11 +37,14 @@ const props = defineProps({
     background-color: var(--white);
     display: flex;
     justify-content: space-around;
+}
+
+.incomeExpenses > section {
+    min-width: calc(100% / 2);
     text-align: center;
 }
 
 .title {
-    width: 130px;
     font-size: 16px;
     letter-spacing: 1.5px;
     font-weight: 500;
