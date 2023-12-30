@@ -1,7 +1,7 @@
 # Expense-Tracker
 ---
 
-![GitHub release (by tag)](https://img.shields.io/github/downloads/JacksonK52/Expense-Tracker/v1.0.0/total) ![Static Badge](https://img.shields.io/badge/Vue--3-3) ![Static Badge](https://img.shields.io/badge/PWA-purple)
+[![Github All Releases](https://img.shields.io/github/downloads/JacksonK52/Expense-Tracker/total.svg)]() ![Static Badge](https://img.shields.io/badge/Vue--3-3) ![Static Badge](https://img.shields.io/badge/PWA-purple)
 
 
 
