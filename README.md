@@ -1,29 +1,38 @@
 # Expense-Tracker
+---
 
-This template should help get you started developing with Vue 3 in Vite.
+![GitHub release (by tag)](https://img.shields.io/github/downloads/JacksonK52/Expense-Tracker/v1.0.0/total) ![Static Badge](https://img.shields.io/badge/Vue--3-3) ![Static Badge](https://img.shields.io/badge/PWA-purple)
 
-## Recommended IDE Setup
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Customize configuration
+## Introduction
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+A simple version of expense tracker app that keep track of income and expenses of your day today budgets. This app is designed and build for educational purpose only.
 
-## Project Setup
+### [Demo](https://konjengbam-expense-tracker.netlify.app/)
 
-```sh
-npm install
+### Prerequisits
+
+Inorder to install and run the application your system need to have the follow list of applications:
+
+- NodeJs
+
+### Install
+
+- Download the compress file or clone the repository from
+
+```shell
+    git clone https://github.com/JacksonK52/Expense-Tracker.git
 ```
 
-### Compile and Hot-Reload for Development
+- Install all required node packages, using the command
 
-```sh
-npm run dev
+```shell
+    npm install
 ```
 
-### Compile and Minify for Production
+- Start the app using the command
 
-```sh
-npm run build
+```shell
+    npm run dev
 ```
