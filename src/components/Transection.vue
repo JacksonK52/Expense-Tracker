@@ -36,7 +36,7 @@ const handleSubmit = () => {
             </div>
             <div class="form-group">
                 <label for="amount">Amount</label>
-                <input type="numeric" class="form-control" name="amount" id="amount" v-model="amount" placeholder="-400" autocomplete="off">
+                <input type="text" inputmode="numeric" class="form-control" name="amount" id="amount" v-model="amount" placeholder="-400" autocomplete="off">
                 <small class="text-sm">(Negative: expenses | Positive: income)</small>
             </div>
             <div class="text-right">
